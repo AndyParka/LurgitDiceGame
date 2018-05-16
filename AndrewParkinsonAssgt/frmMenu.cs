@@ -15,13 +15,16 @@ namespace AndrewParkinsonAssgt
         public frmMenu()
         {
             InitializeComponent();
+
+            gbP1Name.BackColor = Color.Azure;
+            gbP2Name.BackColor = Color.FloralWhite;
         }
 
         private void btn1Player_Click(object sender, EventArgs e)
         {
             //create a new Game form with the appropriate perameter
-            frmGame Game = new frmGame(0);
-            //show said Game form
+            frmGame Game = new frmGame(0, txbP1Name.Text, txbP2Name.Text);
+            //show Game form
             Game.ShowDialog();
 
         }
@@ -29,16 +32,16 @@ namespace AndrewParkinsonAssgt
         private void btn2PlayerCPU_Click(object sender, EventArgs e)
         {
             //create a new Game form with the appropriate perameter
-            frmGame Game = new frmGame(1);
-            //show said Game form
+            frmGame Game = new frmGame(1, txbP1Name.Text, txbP2Name.Text);
+            //show Game form
             Game.ShowDialog();
         }
 
         private void btn2PlayerVS_Click(object sender, EventArgs e)
         {
             //create a new Game form with the appropriate perameter
-            frmGame Game = new frmGame(2);
-            //show said Game form
+            frmGame Game = new frmGame(2, txbP1Name.Text, txbP2Name.Text);
+            //show Game form
             Game.ShowDialog();
         }
 
